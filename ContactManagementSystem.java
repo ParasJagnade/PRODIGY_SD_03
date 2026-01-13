@@ -32,7 +32,7 @@ public class ContactManagementSystem {
             System.out.print("Enter your choice: ");
 
             choice = sc.nextInt();
-            sc.nextLine(); // clear buffer
+            sc.nextLine();
 
             switch (choice) {
                 case 1:
@@ -57,7 +57,6 @@ public class ContactManagementSystem {
         } while (choice != 5);
     }
 
-    // Add Contact
     static void addContact() {
         System.out.print("Enter Name: ");
         String name = sc.nextLine();
@@ -72,7 +71,6 @@ public class ContactManagementSystem {
         System.out.println("Contact added successfully!");
     }
 
-    // View Contacts
     static void viewContacts() {
         if (contacts.isEmpty()) {
             System.out.println("No contacts available.");
@@ -88,7 +86,6 @@ public class ContactManagementSystem {
         }
     }
 
-    // Edit Contact
     static void editContact() {
         viewContacts();
         if (contacts.isEmpty()) return;
@@ -113,7 +110,6 @@ public class ContactManagementSystem {
         }
     }
 
-    // Delete Contact
     static void deleteContact() {
         viewContacts();
         if (contacts.isEmpty()) return;
